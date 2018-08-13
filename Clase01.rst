@@ -67,7 +67,7 @@ Desventajas:
 
 **Programación Orientada a Eventos**: La ejecución está determinada por los sucesos que ocurran.
 	- Generalmente el usuario es el que dirige la ejecución del programa.
-	- Básicamente el programa queda bloqueado hasta producirse un evento.
+	- Básicamente el programa queda sin actividad hasta producirse un evento.
 	- Es la base de la interfaz de usuario.
 
 *Ventajas*:

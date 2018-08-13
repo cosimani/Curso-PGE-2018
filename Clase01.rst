@@ -35,8 +35,6 @@ Clase 01 - PGE 2018
 	- Interfaz gráfica creada a partir de un XML (o JSON). 
 	
 	- App que haga Croma `https://es.wikipedia.org/wiki/Croma <https://es.wikipedia.org/wiki/Croma>`_
-
-	- Continuar con los proyectos del cuatrimestre pasado ( ViajeDirecto y Central Parking ).
 :Temas principales:
 	- Programación genérica y orientada a eventos
 	- Sobrecarga de operadores

@@ -2,7 +2,7 @@
 
 .. _rcs_subversion:
 
-Clase 02 - PGE 2017 (Clase no preparada aún)
+Clase 02 - PGE 2018
 ===================
 (Fecha: 16 de agosto)
 

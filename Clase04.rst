@@ -2,9 +2,9 @@
 
 .. _rcs_subversion:
 
-Clase 04 - PGE 2017 (Clase no preparada aún)
+Clase 04 - PGE 2018
 ===================
-(Fecha: 23 de agosto)
+(Fecha: 27 de agosto)
 
 **Copiar objetos**
 

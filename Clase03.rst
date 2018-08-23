@@ -2,9 +2,9 @@
 
 .. _rcs_subversion:
 
-Clase 03 - PGE 2017 (Clase no preparada aún)
+Clase 03 - PGE 2018
 ===================
-(Fecha: 22 de agosto)
+(Fecha: 23 de agosto)
 
 static
 ======

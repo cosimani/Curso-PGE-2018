@@ -27,7 +27,7 @@ Ejercicio 4:
 .. code-block:: c
 	
 	linea = linea1 + linea2;  
-	// Los tres son objetos LineaDeTexto y la suma devuelve un LineaDeTexto que tiene los textos concatenados
+	// Los tres son objetos LineaDeTexto y la suma devuelve un LineaDeTexto con los textos concatenados
 	
 MiniExamen de preguntas múltiples
 =================================

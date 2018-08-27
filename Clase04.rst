@@ -6,6 +6,29 @@ Clase 04 - PGE 2018
 ===================
 (Fecha: 27 de agosto)
 
+
+**Clase genérica con argumento por defecto**
+
+.. figure:: images/clase03/por_defecto.png
+
+**Declaración adelantada**
+
+.. figure:: images/clase03/declaracion_adelantada.png
+
+**Miembros estáticos**
+
+.. figure:: images/clase03/miembros_estaticos.png
+
+
+**Ejercicio:**
+
+- Utilice la clase genérica Listado dentro de un nuevo proyecto.
+- En la función main crear un listado con 5 QWidget
+- Al iniciar, usar un for para extraerlos y mostrarlos como ventanas independientes.
+- Prestar atención en el problema, y trate de hacerlo funcionar.
+
+
+
 **Copiar objetos**
 
 .. figure:: images/clase04/copiar_objetos.png

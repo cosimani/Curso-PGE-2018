@@ -211,19 +211,6 @@ static
 	}
 
 
-**Clase genérica con argumento por defecto**
-
-.. figure:: images/clase03/por_defecto.png
-
-**Declaración adelantada**
-
-.. figure:: images/clase03/declaracion_adelantada.png
-
-**Miembros estáticos**
-
-.. figure:: images/clase03/miembros_estaticos.png
-
-
 **Ejercicio:** Utilizar la misma clase Poste para sobrecargar operator+ para que sume un objeto Poste con un int.
 
 - Esa sobrecarga nos permitirá hacer Poste suma = p1 + 5;
@@ -237,11 +224,5 @@ static
 
 .. figure:: images/clase03/operadores_globales.png
 
-**Ejercicio:**
-
-- Utilice la clase genérica Listado dentro de un nuevo proyecto.
-- En la función main crear un listado con 5 QWidget
-- Al iniciar, usar un for para extraerlos y mostrarlos como ventanas independientes.
-- Prestar atención en el problema, y trate de hacerlo funcionar.
 
 

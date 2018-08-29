@@ -2,54 +2,34 @@
 
 .. _rcs_subversion:
 
-Clase 05 - PGE 2017 (Clase no preparada aún)
+Clase 05 - PGE 2018
 ===================
-(Fecha: 29 de agosto)
+(Fecha: 30 de agosto)
 
-**Resololución del Ejercicio LineaDeTexto:**
+**Clase genérica con argumento por defecto**
 
-.. code-block::
+.. figure:: images/clase03/por_defecto.png
 
-	#include <QApplication>
-	#include <QLineEdit>
-	#include <QString>
+**Declaración adelantada**
 
-	class LineaDeTexto : public QLineEdit  {
-	    // Q_OBJECT 
-	    // Si usamos Q_OBJECT sin separar la definicion de esta clase en su .h y .cpp puede no compilar
-	    // Recordar que sin el Q_OBJECT no podremos definir signals ni slots en esta clase
+.. figure:: images/clase03/declaracion_adelantada.png
 
-	public:
-	    LineaDeTexto(QString texto = "") : QLineEdit(texto)  {  }
+**Miembros estáticos**
 
-	    // El constructor copia debe invocar explicitamente al constructor de 
-	    // la clase base para que el compilador no tire un warning
-	    LineaDeTexto(const LineaDeTexto & linea) : QLineEdit()  {
-	        this->setText(linea.text());
-	    }
+.. figure:: images/clase03/miembros_estaticos.png
 
-	    LineaDeTexto& operator=(const LineaDeTexto & linea)  {
-	        this->setText(linea.text());
-	        return *this;
-	    }
 
-	    LineaDeTexto operator+(const LineaDeTexto & linea)  {
-	        return LineaDeTexto(this->text() + linea.text());
-	    }
-	};
+Ejercicio 4:
+============
 
-	int main(int argc, char *argv[])  {
-	    QApplication a(argc, argv);
-	    LineaDeTexto linea1("Hola ");
-	    LineaDeTexto linea2("che");
-	    LineaDeTexto total;
-
-	    total = linea1 + linea2;
-	    total.show();
-
-	    return a.exec();
-	}
-
+- Definir la clase LineaDeTexto que herede de QLineEdit
+- Sobrecargar el operator+ operator= y el contructor copia para que se puede ejecutar la siguiente línea de código:
+	
+.. code-block:: c
+	
+	linea = linea1 + linea2;  
+	// Los tres son objetos LineaDeTexto y la suma devuelve un LineaDeTexto con los textos concatenados
+	
 
 Ejercicio 5:
 ============
@@ -60,5 +40,19 @@ Ejercicio 5:
 - Un campo para Nombre, otro para Apellido, para DNI y uno para Nombre completo.
 - Esta última LineaDeTexto concatenará en tiempo real el nombre y apellido usando el operator+ de LineaDeTexto
 
+
+MiniExamen de preguntas múltiples
+=================================
+
+:Tarea para Clase 6:
+	Completar y estudiar exhaustivamente la clase Listado
+
+	Estudiar sobrecarga de operadores y templates
+
+	Ver `Tutorial Qt QVector <https://www.youtube.com/watch?v=Z9u2yDPh57U>`_ de `Videos tutoriales de Qt <https://www.youtube.com/playlist?list=PL54fdmMKYUJvn4dAvziRopztp47tBRNum>`_
+
+	Ver `Tutorial Qt QList <https://www.youtube.com/watch?v=xx5wIjUwlg8>`_ de `Videos tutoriales de Qt <https://www.youtube.com/playlist?list=PL54fdmMKYUJvn4dAvziRopztp47tBRNum>`_
+
+	Ver `Tutorial C++ vector <https://www.youtube.com/watch?v=dNb468_AJQI>`_ de `Videos tutoriales de C++ <https://www.youtube.com/playlist?list=PL54fdmMKYUJvS32aLptKVC0AH9bwsavzi>`_
 
 

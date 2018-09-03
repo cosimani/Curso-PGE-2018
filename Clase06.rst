@@ -2,9 +2,9 @@
 
 .. _rcs_subversion:
 
-Clase 06 - PGE 2017 (Clase no preparada aún)
+Clase 06 - PGE 2018
 ===================
-(Fecha: 30 de agosto)
+(Fecha: 3 de septiembre)
 
 
 	

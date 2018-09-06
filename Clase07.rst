@@ -182,19 +182,20 @@ Ejercicio 8:
 	void Vista::slot_sugerencia()   {
 	    QVector<QStringList> vectorCoincidencias;  // Almacenará las sugerencias
 	    QString cadena = ui->leBuscar->text();
-		
+
 	    // Este for se encarga de encontrar las coincidencias. Se sugieren hasta 5.
 	    for (int i=0, contador=0 ; i<lista.size() && contador<5 ; i++)  {
 
-		    QString string = lista.at(i);
+	        QString string = lista.at(i);
 
-		    if (string.contains(cadena))  {
+	        if (string.contains(cadena))  {
 	            QStringList sugerencia;
 	            sugerencia << string << "Campo";
 	            vectorCoincidencias.push_back(sugerencia);
 	            contador++;
 	        }
 	    }
+	
 	    // Si no existe lo que se busca se limpia el QLineEdit.
 	    if (vectorCoincidencias.size() == 0)  {
 	        ui->leBuscar->clear();

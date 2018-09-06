@@ -5,8 +5,6 @@
 Clase 06 - PGE 2018
 ===================
 (Fecha: 3 de septiembre)
-
-
 	
 
 **Resololución del Ejercicio LineaDeTexto:**
@@ -171,26 +169,4 @@ Ejercicio 6:
 
 - Modificar este ejemplo para que la imagen rote sobre su centro.
 - Cada vez que el usuario desplace la ventana Principal, que al soltarlo se coloque centrado en pantalla.
-
-Clase QCompleter
-================
-
-.. figure:: images/clase03/qcompleter.png
-
-Ejercicio 7:
-============
-
-- Hacer lo mismo pero la base de datos que sea un archivo SQLite.
-
-Ejercicio 8:
-============
-
-- Definir una clase genérica Vector que herede de QVector.
-- Modificar el comportamiento de los siguientes métodos:
-	- at() - En vez de obtener el primer elemento con 0 que lo haga con 1, el 1 con 2,...
-	- size() - Bloquearlo, que no se pueda usar.
-	- float getPromedio() - Si los elementos son int o float, devolver el promedio sino devolver -1
-
-
-
 

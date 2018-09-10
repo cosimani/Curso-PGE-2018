@@ -7,6 +7,31 @@ Clase 08 - PGE 2018
 (Fecha: 10 de septiembre)
 
 
+
+
+**Clase QTreeWidget**
+
+- Permite visualizar una vista en árbol
+- Maneja ítems (objetos de la clase QTreeWidgetItem)
+
+.. code-block::
+
+    QTreeWidget *treeWidget = new QTreeWidget;
+    treeWidget->setColumnCount(2);
+    QList<QTreeWidgetItem *> items;
+
+    QStringList campos;
+    campos << "Campo 1" << "Campo 2";
+
+    for (int i = 0; i < 5; ++i)
+       items.append(new QTreeWidgetItem(campos));
+ 
+    treeWidget->addTopLevelItems(items);
+    treeWidget->show();
+
+
+
+
 	
 **Crear un popup para sugerencias (estilo QCompleter pero mejor)**
 
@@ -199,6 +224,17 @@ Clase 08 - PGE 2018
 
 **Ejercicio** Hacerlo funcionar.
 
+
+Ejercicio 8:
+============
+
+- Definir una clase genérica Vector que herede de QVector.
+- Modificar el comportamiento de los siguientes métodos:
+	- at() - En vez de obtener el primer elemento con 0 que lo haga con 1, el 1 con 2,...
+	- size() - Bloquearlo, que no se pueda usar.
+	- float getPromedio() - Si los elementos son int o float, devolver el promedio sino devolver -1
+
+
 Ejercicio 9:
 ============
 
@@ -217,85 +253,6 @@ Ejercicio 11:
 - Si el diccionario tiene dos columnas, entonces el popup tendrá dos columnas
 - Si el diccionario tiene una sola columna, entonces popup de una sola columna
 - Sugiere primero las palabras que empiecen con las letras buscadas, luego que sugiera las palabras que las contienen.
-
-
-
-
-
-**Creación y uso de librerías dinámicas**
-
-.. figure:: images/clase08/librerias.png
-
-.. figure:: images/clase08/librerias01.png
-
-.. figure:: images/clase08/librerias02.png
-
-.. figure:: images/clase08/librerias03.png
-
-**Ejercicio**
-	- Utilizar la clase LineaDeTexto.
-	- Con todas las carecterísticas que hemos ido agregando (las sugerencias, los operadores, etc.)
-	- Crear una librería dinámica con esta clase.
-	- Usar esta librería en otro proyecto para probar su funcionamiento.
-
-Uso de una clase propia con QtDesigner
-======================================
-
-- Deben heredar de algún QWidget
-- Colocamos el widget (clase base) con QtDesigner
-- Clic derecho "Promote to"
-
-.. figure:: images/clase07/qtdesigner.png
-					 
-- Base class name: QLabel
-- Promoted class name: MiLabel
-- Header file: miLabel.h
-- Add (y con esto queda disponible para promover)
-
-
-- La clase MiLabel deberá heredar de QLabel
-- El constructor debe tener como parámetro:
-
-.. code-block::
-
-	MiLabel(QWidget *parent = 0);  // Esto en miLabel.h
-
-	MiLabel::MiLabel(QWidget *parent) : QLabel(parent)  {  // Esto en miLabel.cpp
-	
-	}
-
-Ejercicio 12:
-============
-
-- Definir la clase TuLabel que herede de QLabel
-- Agregar un QLabel a la GUI y promoverlo a TuLabel
-- Agregar un método void cambiarTexto(QString nuevoTexto)
-- Usar ese método desde la clase Principal de la siguiente forma:
-
-.. code-block::
-
-	ui->tuLabel->cambiarTexto("Sos un TuLabel?");
-
-**Ejercicio**
-	- En una nueva aplicación utilizar la clase LineaDeTexto con la característica de sugerencias
-	- Diseñar la GUI con QtDesigner usando QLineEdit y promoverlo a LineaDeTexto
-
-MiniExamen de preguntas múltiples
-=================================
-
-:Tarea para Clase 9:
-	Completar y estudiar exhaustivamente operador de asignación y constructor copia
-
-	Estudiar eventFilter y LineaDeTexto mejorado
-
-	Ver `Tutorial Qt Creator - qDebug Operador de inserción <https://www.youtube.com/watch?v=IBMU3FyisKY>`_ de `Videos tutoriales de Qt <https://www.youtube.com/playlist?list=PL54fdmMKYUJvn4dAvziRopztp47tBRNum>`_
-
-	Ver `Tutorial Qt Creator - Timer <https://www.youtube.com/watch?v=_Ps7aHDoAr4>`_ de `Videos tutoriales de Qt <https://www.youtube.com/playlist?list=PL54fdmMKYUJvn4dAvziRopztp47tBRNum>`_
-
-	Ver `Tutorial Qt Creator - QTimer <https://www.youtube.com/watch?v=c6JZECBL54Q>`_ de `Videos tutoriales de Qt <https://www.youtube.com/playlist?list=PL54fdmMKYUJvn4dAvziRopztp47tBRNum>`_
-
-	Ver `Tutorial Qt Creator - Archivo de recursos <https://www.youtube.com/watch?v=u8xKE0zHLsE>`_ de `Videos tutoriales de Qt <https://www.youtube.com/playlist?list=PL54fdmMKYUJvn4dAvziRopztp47tBRNum>`_
-
 
 
 

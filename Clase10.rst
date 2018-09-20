@@ -29,17 +29,3 @@ Ejercicio 13:
 .. figure:: images/clase08/ejercicio.png
 
 
-CLI >> GUI >> NUI
-=================
-
-.. figure:: images/clase11/cli_gui_nui.png
-	:target: https://prezi.com/_iqvhrobpe0p/desarrollo/
-
-Ejercicio 14:
-============
-
-- Proponer una interfaz gráfica de usuario
-- Que sea sólo de una ventana
-- Buscar algún sitio, en algún video, alguna aplicación para móvil o desktop
-- Replicarla en Qt
-

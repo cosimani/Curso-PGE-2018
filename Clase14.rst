@@ -54,20 +54,20 @@ Levantar frame por frame: Clase QAbstractVideoSurface
 .. code-block:: c++
 
 	class Capturador : public QAbstractVideoSurface  {
-		Q_OBJECT
+	    Q_OBJECT
 
 	public:
-		Capturador(QObject *parent = 0);
+	    Capturador(QObject *parent = 0);
 
-		QList<QVideoFrame::PixelFormat> supportedPixelFormats(
+	    QList<QVideoFrame::PixelFormat> supportedPixelFormats(
 	          QAbstractVideoBuffer::HandleType handleType = QAbstractVideoBuffer::NoHandle ) const;
 
-		bool present(const QVideoFrame &frame);
+	    bool present(const QVideoFrame &frame);
 
-		QVideoFrame getFrameActual()  {  return frameActual;  }
+	    QVideoFrame getFrameActual()  {  return frameActual;  }
 
 	private:
-		QVideoFrame frameActual;
+	    QVideoFrame frameActual;
 	};
 
 
@@ -78,11 +78,11 @@ Levantar frame por frame: Clase QAbstractVideoSurface
 .. code-block:: c++
 
 	bool Capturador::present(const QVideoFrame &frame)  {
-		frameActual = frame;
+	    frameActual = frame;
 		
-		frameActual.map(QAbstractVideoBuffer::ReadOnly);
+	    frameActual.map(QAbstractVideoBuffer::ReadOnly);
 		
-		return true;  // Con la idea de devolver true si este frame fue usado
+	    return true;  // Con la idea de devolver true si este frame fue usado
 	}
 
 

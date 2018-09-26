@@ -60,8 +60,7 @@ Levantar frame por frame: Clase QAbstractVideoSurface
 		Capturador(QObject *parent = 0);
 
 		QList<QVideoFrame::PixelFormat> supportedPixelFormats(
-	              QAbstractVideoBuffer::HandleType handleType = QAbstractVideoBuffer::NoHandle
-	                                                         ) const;
+	          QAbstractVideoBuffer::HandleType handleType = QAbstractVideoBuffer::NoHandle ) const;
 
 		bool present(const QVideoFrame &frame);
 

@@ -362,7 +362,7 @@ Ejercicio 22:
 Recordatorio sobre la entrega de ejercicios
 ===========================================
 
-- Se deberán entregar todos aquellos ejercicios que entán enumerados
-- Cada alumno entregará sólo algunos ejercicios ordenados según este `Documento en Drive <https://docs.google.com/spreadsheets/d/1UwNRoHAjKcXijoVK36GH-I3qsZR58dgwXoKZoz_-iiQ/edit?usp=sharing>`_
+- Se deberán entregar todos aquellos ejercicios que están enumerados
+- Cada alumno entregará sólo algunos ejercicios ordenados según este `Documento en Drive <https://drive.google.com/open?id=1vWvyURotFdkajHtiL18khStC7waNYwu0a5vL1RmZFvo>`_
 
 

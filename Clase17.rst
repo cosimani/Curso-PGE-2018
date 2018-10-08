@@ -105,7 +105,7 @@ Función callback
 	    (*puntero_funcion)();  // Llama a la función apuntada
 	}
 
-Ejercicio 31:
+Ejercicio 32:
 ============
 
 - Definir la siguiente clase:

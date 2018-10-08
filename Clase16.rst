@@ -2,9 +2,136 @@
 
 .. _rcs_subversion:
 
-Clase 16 - PGE 2017 (Clase no preparada aún)
+Clase 16 - PGE 2018
 ===================
-(Fecha: 11 de octubre)
+(Fecha: 8 de octubre)
+
+
+Uso de singleton
+================
+
+.. figure:: images/clase13/singleton.png
+
+**Ejemplo de Manager como singleton**
+
+.. code-block:: c++
+
+	#include <QApplication>
+	#include "manager.h"
+
+	int main( int argc, char ** argv )
+	{
+	    QApplication a( argc, argv );
+
+	    Manager::getInstancia()->iniciar();
+
+	    return a.exec();
+	}
+
+.. code-block:: c++
+
+	#ifndef MANAGER_H
+	#define MANAGER_H
+
+	#include <QObject>
+	#include <QVector>
+
+	#include "login.h"
+	#include "formulario.h"
+
+	class Manager : public QObject
+	{
+	    Q_OBJECT
+
+	private:
+	    static Manager *instancia;
+	    explicit Manager( QObject * parent = 0 );
+
+	public:
+	    static Manager *getInstancia();
+	    ~Manager();
+
+	    void iniciar();
+
+	private:
+	    Login * login;
+	    Formulario * formulario;
+
+	private slots:
+	    void slot_ingreso( bool valido, QStringList usuario );
+
+	};
+
+	#endif // MANAGER_H
+
+.. code-block:: c++
+
+	#include "manager.h"
+
+	Manager * Manager::instancia = NULL;
+
+	Manager::Manager( QObject * parent ) : QObject( parent ),
+	                                       login( new Login ),
+	                                       formulario( new Formulario )
+	{
+
+	    connect( login, SIGNAL( signal_usuarioValidado( bool, QStringList ) ), 
+	             this, SLOT( slot_ingreso( bool, QStringList ) ) );
+
+	    QVector< QStringList > nuevosUsuarios;
+
+	    QStringList usuario1;  usuario1 << "carlos" << "123";
+	    QStringList usuario2;  usuario2 << "miguel" << "1234";
+	    QStringList usuario3;  usuario3 << "julio" << "12345";
+
+	    nuevosUsuarios << usuario1 << usuario2 << usuario3;
+
+	    login->setBaseUsuarios( nuevosUsuarios );
+	}
+
+
+	Manager * Manager::getInstancia()
+	{
+	    if( instancia == NULL )
+	    {
+	        instancia = new Manager();
+	    }
+	    return instancia;
+	}
+
+	Manager::~Manager()
+	{
+	    if( instancia != NULL )
+	    {
+	        delete instancia;
+	    }
+	}
+
+	void Manager::iniciar()
+	{
+	    login->show();
+	}
+
+	void Manager::slot_ingreso( bool valido, QStringList usuario )
+	{
+	    if ( valido )  {
+	        login->hide();
+	        formulario->show();
+	        formulario->setWindowTitle( "Bienvenido: " + usuario.at( 0 ) );
+	    }
+	    else  {
+	        login->close();
+	    }  
+	}
+
+
+Ejercicio 23:
+============
+
+- Hacer funcionar este ejemplo con Formulario, Login y Manager como singleton.
+- Agregar la característica a Formulario para que se puedan agregar nuevos usuarios a login.
+- Al cerrar Formulario, no se cierra el programa sino que vuelve a Login para que pueda usar el usuario nuevo.
+- Cuando un usuario se loguea, Login se debe ocultar.
 
 
 
@@ -60,7 +187,7 @@ Uso de atributos estáticos
 	}
 
 
-Ejercicio 23:
+Ejercicio 24:
 ============
 
 .. figure:: images/clase13/logger.png
@@ -362,7 +489,7 @@ donde:
 - `Descargar el código fuente <https://github.com/cosimani/Curso-PGE-2017/blob/master/sources/clase14/EjemploTexturas.zip?raw=true>`_
 
 
-Ejercicio 24:
+Ejercicio 25:
 ============
 
 - Caminando en la habitación.
@@ -370,7 +497,7 @@ Ejercicio 24:
 - Con las teclas UP y DOWN realizar el efecto como si estuviéramos desplazándonos sobre la habitación hacia delante y atrás.
 - Colocar una pared al fondo de la habitación con textura de ladrillos.
 
-Ejercicio 25:
+Ejercicio 26:
 ============
 
 - En un nuevo proyecto promocionar en QtDesigner dos Escenas.
@@ -398,12 +525,12 @@ Ejercicio 25:
 
 .. figure:: images/clase09/type_info.png
 
-Ejercicio 26:
+Ejercicio 27:
 ============
 
 .. figure:: images/clase09/ejercicio1.png
 
-Ejercicio 27:
+Ejercicio 28:
 ============
 
 .. figure:: images/clase09/ejercicio2.png
@@ -517,7 +644,7 @@ Tratamiento de excepciones
 	    return 0;
 	}
 	
-Ejercicio 28:
+Ejercicio 29:
 ============
 
 - Modificar la clase listado para que cuando sea necesario lance la excepción ExcRango cuando se intente acceder a un index fuera de rango. Probarlo luego en la función main.
@@ -720,13 +847,13 @@ Ejercicio 28:
 - Podríamos terminar un hilo a fuerza bruta con terminate().
 - Dormimos el hilo con: sleep(int seg) o msleep(int miliseg) o usleep(int microseg)
 
-Ejercicio 29:
+Ejercicio 30:
 ============
 	
 - Diseñar una aplicación GUI que escriba en un archivo muchísimos caracteres de tal forma se note que la interfaz de usuario se bloquea hasta finalizar la escritura.
 - Luego de esto, utilizar un hilo distinto para escribir la misma cantidad de caracteres.
 
-Ejercicio 30:
+Ejercicio 31:
 ============
 
 .. figure:: images/clase16/ejer-medidor.jpg

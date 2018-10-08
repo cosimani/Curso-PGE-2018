@@ -21,7 +21,7 @@ Clase 18 - PGE 2017 (Clase no preparada aún)
 
 	int a = afptr[n](x);
 	
-Ejercicio 32:
+Ejercicio 33:
 ============
 
 - Con la misma idea del ejercicio anterior. Crear la clase genérica ListadoGenerico que herede de QVector<T>
@@ -35,7 +35,7 @@ Ejercicio 32:
 - Notar que ordenar podrá ordenar elementos de cualquier tipo, siempre y cuando los objetos a ordenar sean de una clase que tenga sobrecargado el operador >
 	
 
-Ejercicio 33:
+Ejercicio 34:
 ============
 
 - Modificar el ejercicio de la clase ListadoEnteros para usar funciones globales de ordenamiento, es decir, que no se encuentren dentro de Ordenador ni de ninguna clase.
@@ -56,7 +56,7 @@ Ejercicio 33:
 
     listado.ordenar(ordenador);
 
-Ejercicio 34:
+Ejercicio 35:
 ============
 
 - Modificar el ejercicio anterior usando también funciones globales de ordenamiento pero con la clase ListadoGenerico que sea un template:
@@ -70,7 +70,7 @@ Ejercicio 34:
 	    }
 	};
 
-Ejercicio 35:
+Ejercicio 36:
 ============
 
 - Necesitamos conocer el rendimiento de cada algoritmo de ordenamiento midiendo su tiempo.

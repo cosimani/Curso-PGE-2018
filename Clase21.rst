@@ -43,13 +43,13 @@ Ejemplo de un proyecto base para el parcial
 	- Desplazarse hacia laterales
 
 
-Ejercicio 41:
+Ejercicio 42:
 ============
 
 - Dentro de la escena mostrar la cámara.
 - Que permita pausar la cámara con la letra P.
 
-Ejercicio 42:
+Ejercicio 43:
 ============
 
 - Pensar en la siguiente topología
@@ -66,7 +66,7 @@ Ejercicio 42:
 - El puntero apunta a una función global en el archivo de cabecera rutas.h donde existen varias funciones que generan distintas tablas de ruteo.
 - Notar que cada router tiene su propia tabla de ruteo
 
-Ejercicio 43:
+Ejercicio 44:
 ============
 
 - En el medio de la habitación dibujar un cubo girando

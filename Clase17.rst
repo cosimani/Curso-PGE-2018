@@ -11,7 +11,7 @@ Texturas
 ========
 
 - Con la texturización agregamos una imagen a un polígono.
-- En lugar de ver un color plano o color en degredé, veremos una imagen proyectada.
+- En lugar de ver un color plano o color en degradé, veremos una imagen proyectada.
 
 **Cargando texturas en memoria**
 
@@ -31,9 +31,9 @@ Texturas
 
 **Pasando las texturas a OpenGL**
 
-- Cuando le pasamos la textura a OpenGL, éste nos devolverá un identificador.
+- Cuando le pasamos la textura a OpenGL, este nos devolverá un identificador.
 - Cada textura tendrá un identificador propio.
-- Cómo obtenemos ese identificador? Creamos una variable para almacenarlo:
+- ¿Cómo obtenemos ese identificador? Creamos una variable para almacenarlo:
 
 .. code-block:: c++
 
@@ -44,7 +44,7 @@ Texturas
 
 .. code-block:: c++
 
-	glGenTextures(1, &idTextura);  // este ultimo parámetro es GLuint *textures
+	glGenTextures( 1, &idTextura );  // este ultimo parámetro es GLuint *textures
 
 - OpenGL pondrá en ``idTextura`` el valor del identificador. 
 - Con ``glBindTexture(...)`` asignamos el valor de idTextura, a una textura de destino. 
@@ -52,13 +52,13 @@ Texturas
 
 .. code-block:: c++
 
-	glBindTexture(GL_TEXTURE_2D, idTextura);
+	glBindTexture( GL_TEXTURE_2D, idTextura );
 
 - Ahora lo más importante, pasarle la textura a OpenGL. Con ``glTexImage2D(...)``.
 
 .. code-block:: c++
 
-	glTexImage2D(GL_TEXTURE_2D, 0, 3, anchoTextura, altoTextura, 0, GL_RGB, GL_UNSIGNED_BYTE, textura);
+	glTexImage2D( GL_TEXTURE_2D, 0, 3, anchoTextura, altoTextura, 0, GL_RGB, GL_UNSIGNED_BYTE, textura );
 
 donde:
 
@@ -95,8 +95,8 @@ donde:
 
 .. code-block:: c++
 
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR );
+	glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR );
 
 - Con esto estamos parametrizando dos filtros. 
 - Uno para cuando la textura se representa más grande de lo que es en realidad.
@@ -112,32 +112,32 @@ donde:
 
 .. code-block:: c++
 
-	glBegin (GL_QUADS);
-	    glVertex3i (-100, -100, -5);
-	    glVertex3i (-100, 100, -5);
-	    glVertex3i (100, 100, -5);
-	    glVertex3i (100, -100, -5);
+	glBegin ( GL_QUADS );
+	    glVertex3i ( -100, -100, -5 );
+	    glVertex3i ( -100,  100, -5 );
+	    glVertex3i (  100,  100, -5 );
+	    glVertex3i (  100, -100, -5 );
 	glEnd ();
 
 - Aplicando textura sería:
 
 
 .. code-block:: c++
-	glEnable(GL_TEXTURE_2D);	// Activamos la texturización
-	glBindTexture(GL_TEXTURE_2D, idTextura);	// Activamos la textura con idTextura
+	glEnable( GL_TEXTURE_2D );	// Activamos la texturización
+	glBindTexture( GL_TEXTURE_2D, idTextura );	// Activamos la textura con idTextura
 
-	glBegin (GL_QUADS);
-	    glTexCoord2f(0.0f, 0.0f);    glVertex3i (-100, -100, -5);
-	    glTexCoord2f(1.0f, 0.0f);    glVertex3i (-100, 100, -5);
-	    glTexCoord2f(1.0f, 1.0f);    glVertex3i (100, 100, -5);
-	    glTexCoord2f(0.0f, 1.0f);    glVertex3i (100, -100, -5);
+	glBegin ( GL_QUADS );
+	    glTexCoord2f( 0.0f, 0.0f );    glVertex3i ( -100, -100, -5 );
+	    glTexCoord2f( 1.0f, 0.0f );    glVertex3i ( -100,  100, -5 );
+	    glTexCoord2f( 1.0f, 1.0f );    glVertex3i (  100,  100, -5 );
+	    glTexCoord2f( 0.0f, 1.0f );    glVertex3i (  100, -100, -5 );
 	glEnd ();
 
-	glDisable(GL_TEXTURE_2D);  // Desactivamos la textura. Para que no intente
+	glDisable( GL_TEXTURE_2D );  // Desactivamos la textura. Para que no intente
 	                           // texturizar algo que dibujemos después.
 
 
-- Con la función ``glTexCoord2f(0.0f, 0.0f)`` tenemos: Las coordenadas de textura. 
+- Con la función ``glTexCoord2f( 0.0f, 0.0f )`` tenemos: Las coordenadas de textura. 
 
 **Ejemplo:**
 
@@ -156,14 +156,14 @@ donde:
 
 	public:
 	    Ogl();
-	    void setTimer(int timerIntervalo);
+	    void setTimer( int timerIntervalo );
 
 	protected:
 	    virtual void initializeGL() = 0;
-	    virtual void resizeGL(int width, int height) = 0;
+	    virtual void resizeGL( int width, int height ) = 0;
 	    virtual void paintGL() = 0;
 
-	    virtual void keyPressEvent(QKeyEvent *e);
+	    virtual void keyPressEvent( QKeyEvent * e );
 
 	    virtual void timeout();
 
@@ -189,16 +189,16 @@ donde:
 	Ogl::Ogl()  {
 	}
 
-	void Ogl::setTimer(int timerIntervalo)  {
-	    if(timerIntervalo > 0)  {
-	        timerIntervalo = qMin(15, timerIntervalo);
-	        timer = new QTimer(this);
-	        connect(timer, SIGNAL(timeout()), this, SLOT(slot_timeout()));
-	        timer->start(timerIntervalo);
+	void Ogl::setTimer( int timerIntervalo )  {
+	    if( timerIntervalo > 0 )  {
+	        timerIntervalo = qMin( 15, timerIntervalo );
+	        timer = new QTimer( this );
+	        connect( timer, SIGNAL( timeout() ), this, SLOT( slot_timeout() ) );
+	        timer->start( timerIntervalo );
 	    }
 	}
 
-	void Ogl::keyPressEvent(QKeyEvent *e)  {
+	void Ogl::keyPressEvent( QKeyEvent * e )  {
 	    switch( e->key() )  {
 	    case Qt::Key_Escape:
 	        close();
@@ -223,7 +223,7 @@ donde:
 	    Visual();
 	protected:
 	    void initializeGL();
-	    void resizeGL(int ancho, int alto);
+	    void resizeGL( int ancho, int alto );
 	    void paintGL();
 	    void timeout();
 	private:
@@ -242,35 +242,35 @@ donde:
 
 	void Visual::initializeGL()  {
 	    this->cargarTexturas();
-	    glEnable(GL_TEXTURE_2D);
-	    glShadeModel(GL_SMOOTH);
-	    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-	    glClearDepth(1.0f);
-	    glEnable(GL_DEPTH_TEST);
+	    glEnable( GL_TEXTURE_2D );
+	    glShadeModel( GL_SMOOTH );
+	    glClearColor( 0.0f, 0.0f, 0.0f, 0.0f );
+	    glClearDepth( 1.0f );
+	    glEnable( GL_DEPTH_TEST );
 	}
 
-	void Visual::resizeGL(int ancho, int alto)  {
-	    glViewport( 0, 0, (GLint)ancho, (GLint)alto );
-	    glMatrixMode(GL_PROJECTION);
+	void Visual::resizeGL( int ancho, int alto )  {
+	    glViewport( 0, 0, ( GLint )ancho, ( GLint )alto );
+	    glMatrixMode( GL_PROJECTION );
 	    glLoadIdentity();
-	    gluPerspective(45.0f, (GLfloat)ancho/(GLfloat)alto, 1, 100.0f);
-	    glMatrixMode(GL_MODELVIEW);
+	    gluPerspective( 45.0f, ( GLfloat )ancho / ( GLfloat )alto, 1, 100.0f );
+	    glMatrixMode( GL_MODELVIEW );
 	    glLoadIdentity();
 	}
 
 	void Visual::paintGL()  {
-	    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	    glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
 	    glLoadIdentity();
-	    glEnable(GL_TEXTURE_2D);  // Activamos la texturización
-	    glBindTexture(GL_TEXTURE_2D, idTextura);  // Activamos la textura con idTextura
+	    glEnable( GL_TEXTURE_2D );  // Activamos la texturización
+	    glBindTexture( GL_TEXTURE_2D, idTextura );  // Activamos la textura con idTextura
 
-	    glBegin(GL_QUADS);
-	        glTexCoord2f(0.0f, 0.0f);  glVertex3f(-2.0f, -2.0f,  -8);
-	        glTexCoord2f(2.0f, 0.0f);  glVertex3f( 2.0f, -2.0f,  -8);
-	        glTexCoord2f(2.0f, 1.0f);  glVertex3f( 2.0f,  2.0f,  -8);
-	        glTexCoord2f(0.0f, 1.0f);  glVertex3f(-2.0f,  2.0f,  -8);
+	    glBegin( GL_QUADS );
+	        glTexCoord2f( 0.0f, 0.0f );  glVertex3f( -2.0f, -2.0f, -8 );
+	        glTexCoord2f( 2.0f, 0.0f );  glVertex3f(  2.0f, -2.0f, -8 );
+	        glTexCoord2f( 2.0f, 1.0f );  glVertex3f(  2.0f,  2.0f, -8 );
+	        glTexCoord2f( 0.0f, 1.0f );  glVertex3f( -2.0f,  2.0f, -8 );
 	    glEnd();
-	    glDisable(GL_TEXTURE_2D);
+	    glDisable( GL_TEXTURE_2D );
 	    glFlush();
 	}
 
@@ -280,19 +280,19 @@ donde:
 
 	void Visual::cargarTexturas()   {
 	    QImage im;
-	    if (!im.load(":/recursos/pared.bmp"))
-	        QMessageBox::critical(this, "Recurso no disponible", "La imagen no pudo ser cargada.");
+	    if ( ! im.load( ":/recursos/pared.bmp" ) )
+	        QMessageBox::critical( this, "Recurso no disponible", "La imagen no pudo ser cargada." );
 	    im = QGLWidget::convertToGLFormat( im );
 	    textura = im.bits();
 
-	    glGenTextures(1, &idTextura);  // Generamos 1 textura. Guardamos su id en idTextura.
-	    glBindTexture(GL_TEXTURE_2D, idTextura);  // Activamos idTextura.    
-	    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); // GL_LINEAR - Interpolacion
-	    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); // GL_NEAREST - Sin 
+	    glGenTextures( 1, &idTextura );  // Generamos 1 textura. Guardamos su id en idTextura.
+	    glBindTexture( GL_TEXTURE_2D, idTextura );  // Activamos idTextura.    
+	    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR ); // GL_LINEAR - Interpolacion
+	    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR ); // GL_NEAREST - Sin 
 
-	    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);  // GL_CLAMP -    
-	    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);  // GL_REPEAT - Permite repetir
-	    glTexImage2D(GL_TEXTURE_2D, 0, 3, im.width(), im.height(), 0, GL_RGBA, GL_UNSIGNED_BYTE, textura);
+	    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT );  // GL_CLAMP -    
+	    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT );  // GL_REPEAT - Permite repetir
+	    glTexImage2D( GL_TEXTURE_2D, 0, 3, im.width(), im.height(), 0, GL_RGBA, GL_UNSIGNED_BYTE, textura );
 	}
 
 

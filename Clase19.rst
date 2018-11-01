@@ -56,6 +56,11 @@ MiniExamen de preguntas múltiples
 - Podríamos terminar un hilo a fuerza bruta con terminate().
 - Dormimos el hilo con: sleep(int seg) o msleep(int miliseg) o usleep(int microseg)
 
+**Ejemplo: Clase Factorial
+
+.. figure:: images/clase19/clase_factorial.png
+
+
 Ejercicio 30:
 ============
 	

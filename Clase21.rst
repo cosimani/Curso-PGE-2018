@@ -644,7 +644,7 @@ Ejercicio 43:
 
 .. figure:: images/clase21/topologia.png
 
-- `Descargar el siguiente proyecto Qt <https://github.com/cosimani/Curso-PGE-2016/blob/master/resources/clase21/redes.rar?raw=true>`_
+- `Descargar el siguiente proyecto Qt <https://github.com/cosimani/Curso-PGE-2018/blob/master/resources/clase21/redes.rar?raw=true>`_
 - En la clase Router definir un método que reciba como parámetro un puntero a función, por ejemplo:
 
 .. code-block:: c++	

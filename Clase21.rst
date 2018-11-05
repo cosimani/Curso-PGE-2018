@@ -313,13 +313,10 @@ Ejercicio 36:
 
 
 
-
-
-
 Ejercicio 37:
 ============
 
-- Descargar la escena `Habitación <https://github.com/cosimani/Curso-PGE-2017/blob/master/sources/clase19/Habitacion.zip?raw=true>`_
+- Descargar la escena `Habitación <https://github.com/cosimani/Curso-PGE-2018/blob/master/sources/clase19/Habitacion.zip?raw=true>`_
 
 - Replicar lo que se visualiza en el siguiente video: https://www.youtube.com/watch?v=Jr_luYdSfRE
 
@@ -400,7 +397,7 @@ Ejercicio 37:
 
 **Resolución**
 
-- Descargar `Código fuente <https://github.com/cosimani/Curso-PGE-2017/blob/master/sources/clase19/camaraOgl.zip?raw=true>`_
+- Descargar `Código fuente <https://github.com/cosimani/Curso-PGE-2018/blob/master/sources/clase19/camaraOgl.zip?raw=true>`_
 
 Ejercicio 38:
 ============
@@ -563,9 +560,9 @@ Ejercicio 40:
 
 **Ayuda para Ejercicio:** 
 
-- `Descargar proyecto Seguimiento desde aquí <https://github.com/cosimani/Curso-PGE-2017/blob/master/sources/clase20/seguimiento.rar?raw=true>`_
+- `Descargar proyecto Seguimiento desde aquí <https://github.com/cosimani/Curso-PGE-2018/blob/master/sources/clase20/seguimiento.rar?raw=true>`_
 
-- También puede usar el siguiente `Código fuente <https://github.com/cosimani/Curso-PGE-2017/blob/master/sources/clase19/camaraOgl.zip?raw=true>`_
+- También puede usar el siguiente `Código fuente <https://github.com/cosimani/Curso-PGE-2018/blob/master/sources/clase19/camaraOgl.zip?raw=true>`_
 
 - Dispone de la clase Capturador que tiene el siguiente método:
 
@@ -618,35 +615,11 @@ Ejercicio 41:
 - Colocar un botón que permita abrir el disco y elegir la imagen que será colocada como fondo.
 
 
-
-
-
-Ejercitación para segundo parcial
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-**Recomendaciones**
-
-- No dejar de ver el video de Youtube sobre Excepciones
-- Tener en cuenta todos los ejercicios sobre punteros a funciones
-- Rápidamente debería poder hacer un hilo con QThread
-
-
-Temas para segundo parcial
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-- Imágenes de cámaras con QCameraViewfinder y QAbstractVideoSurface (traer cámara USB si van a usar PC de laboratorio, o pedirme que tengo).
-- Análisis pixel a pixel, escala de grises, negativo, eliminar componente
-- Tratamiento de excepciones
-- Hilos con QThread
-- Callback, punteros a funciones, punteros a métodos de clases
-- OpenGL, texturas, imagen de la cámara como textura
-
-
-Ejemplo de un proyecto base para el parcial
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Ejemplo de un proyecto para desplazarse dentro de una escena OpenGL
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Permite desplazarse con teclado y mouse dentro de la escena OpenGL
-- `Descargar proyecto base desde aquí <https://github.com/cosimani/Curso-PGE-2017/blob/master/sources/clase21/DesplazamientoEnEscena.rar?raw=true>`_
+- `Descargar proyecto base desde aquí <https://github.com/cosimani/Curso-PGE-2018/blob/master/sources/clase21/DesplazamientoEnEscena.rar?raw=true>`_
 - Notar lo siguiente:
 	- Método para dibujar plano horizontal y vertical
 	- Control del mouse para la rotación

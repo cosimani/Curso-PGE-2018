@@ -2,18 +2,15 @@
 
 .. _rcs_subversion:
 
-Clase 21 - PGE 2017 (Clase no preparada aún)
+Clase 21 - PGE 2018
 ===================
-(Fecha: 7 de noviembre)
-
-
-
+(Fecha: 5 de noviembre)
 
 
 MiniExamen de preguntas múltiples
 =================================
 
-:Tarea para Clase 21 (5 de noviembre):
+:Tarea para Clase 22 (8 de noviembre):
 	Ver `Tutorial Qt Designer <https://www.youtube.com/watch?v=na0dOHmLFYI>`_ de `Videos tutoriales de Qt <https://www.youtube.com/playlist?list=PL54fdmMKYUJvn4dAvziRopztp47tBRNum>`_
 	
 	Ver `Tutorial Qt Creator - Icono de la aplicación <https://www.youtube.com/watch?v=eM9ItsibSjc>`_ de `Videos tutoriales de Qt <https://www.youtube.com/playlist?list=PL54fdmMKYUJvn4dAvziRopztp47tBRNum>`_

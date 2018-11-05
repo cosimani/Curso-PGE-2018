@@ -166,7 +166,7 @@ Ejercicio 32:
 
 **Array de punteros a función**
 
-- Los punteros a funciones se pueden agruparse en arreglos
+- Los punteros a funciones se pueden agrupar en arreglos
 
 .. code-block:: c++	
 

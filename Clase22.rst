@@ -103,6 +103,10 @@ Ejercicio 39:
 ============
 
 - En el ejercicio de la Habitación, mejorar los movimientos que se realizan con el mouse.
+
+Ejercicio 40:
+============
+
 - Con la barra espaciadora se deberá saltar dentro de la escena.
 
 

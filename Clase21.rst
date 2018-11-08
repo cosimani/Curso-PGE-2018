@@ -311,13 +311,3 @@ Ejercicio 36:
 	}
 
 
-
-
-Ejercicio 37:
-============
-
-- Descargar la escena `Habitación <https://github.com/cosimani/Curso-PGE-2018/blob/master/sources/clase19/Habitacion.zip?raw=true>`_
-
-- Replicar lo que se visualiza en el siguiente video: https://www.youtube.com/watch?v=Jr_luYdSfRE
-
-

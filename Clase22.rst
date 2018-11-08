@@ -239,3 +239,17 @@ Ejercicio 40:
 	    ui->leValorNuevo->clear();
 	}
 
+
+Cálculo de la tercer nota
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: c++
+
+	Promedio entre los porcentajes obtenidos en:
+	    Nota final = ( Cuestionario 1 ( % ) + Cuestionario 2 ( % ) + Cuestionario 3 ( % ) + 
+	                   Cuestionario 4 ( % ) + Ejercicios 1 al 6 ( % ) + Ejercicios 7 al 12 ( % ) + 
+	                   Ejercicios 13 al 17 ( % ) + Ejercicios 18 al 22 ( % ) ) / 8
+
+
+
+

@@ -2,10 +2,10 @@
 
 .. _rcs_subversion:
 
-Clase 24 - PGE 2017  (Clase no preparada aún)
+Clase 24 - PGE 2018
 ===================
-(Fecha: 21 de noviembre)
+(Fecha: 15 de noviembre)
 
-Recuperatorio primer parcial y entrega de ejercicios
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Revisión de ejercicios para tercer nota parcial
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

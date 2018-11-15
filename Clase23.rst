@@ -2,9 +2,9 @@
 
 .. _rcs_subversion:
 
-Clase 23 - PGE 2017 (Clase no preparada aún)
+Clase 23 - PGE 2018
 ===================
-(Fecha: 14 de noviembre)
+(Fecha: 12 de noviembre)
 
 Revisión de proyectos
 ^^^^^^^^^^^^^^^^^^^^^
